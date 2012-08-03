@@ -1,9 +1,8 @@
 @import "./bootstrap/less/bootstrap.less";
-
-@controversialRed: #A11;
-@newOrange: #C60;
-@popularGreen: #6C9;
-@unpopularGray: #999;
+@controversialRed: #bb3221;
+@newOrange: #000;
+@popularGreen: #5fb8b2;
+@unpopularGray: #7e7e7e;
 
 @margin: 12px;
 @padding: 12px;
@@ -30,20 +29,44 @@ body.home {
     .point {
       background: @gray;
       color:@white;
-      
+    }
+    .motion {
+      .author {
+        font-style: oblique;
+        display:block;
+        margin-bottom: @margin;
+      }
+      .likes {
+        text-align: right;
+      }
+      .dislikes {
+        text-align: left;
+      }
     }
     .motion, .point { padding:10px; color: @white;
       &.new {
         background: @newOrange;
+        &:hover {
+          background: lighten(@newOrange, 10%)
+        }
       }
       &.controversial {
         background: @controversialRed;
+        &:hover {
+          background: lighten(@controversialRed, 10%)
+        }
       }
       &.popular {
         background: @popularGreen;
+        &:hover {
+          background: lighten(@popularGreen, 10%)
+        }
       }
       &.unpopular {
         background: @unpopularGray;
+        &:hover {
+          background: lighten(@unpopularGray, 10%)
+        }
       }
     }
   }
