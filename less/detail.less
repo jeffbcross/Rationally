@@ -1,0 +1,88 @@
+@proponentGreen: #bfb;
+@opponentRed: #fcc;
+
+.detail #main {
+
+  .motion-header, .point {
+    background: @newBlack;
+    color: @white;
+
+    padding: @padding;
+    margin-bottom: @margin;
+
+    &.controversial {
+      background: @controversialRed;
+    }
+    &.popular {
+      background: @popularGreen;
+    }
+    &.unpopular {
+      background: @unpopularGray;
+    }
+  }
+
+  .points {
+    padding-left: @padding;
+    border-left: 1px solid @black;
+
+    .point {
+      width: 300px;
+
+      .point-header {
+        border-bottom: 1px solid @white;
+        font-weight: bold;
+        padding-bottom: @padding / 2;
+        margin-bottom: @margin / 2;
+
+        .stats {
+          float: right;
+          .likes, .dislikes { display: inline-block; }
+        }
+      }
+
+      .comments-summary {
+        a { color: @white; }
+      }
+
+
+    }
+
+    .point-expanded {
+      width: 500px;
+
+      .comments {
+        margin-top: @padding;
+        padding: @padding;
+        background: @white;
+        color: @black;
+        border-left: 1px solid @white;
+
+        .comment {
+          margin-bottom: @margin / 2;
+          padding: @padding;
+          background: #ddd;
+
+          &.proponent {
+            background: @proponentGreen;
+          }
+
+          &.opponent {
+            background: @opponentRed;
+          }
+
+          .author {
+            font-weight: bold;
+            margin-bottom: @margin / 2;
+          }
+        }
+
+        .login-prompt {
+          text-align: center;
+        }
+      }
+
+      
+    }
+  }
+
+}

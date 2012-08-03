@@ -1,13 +1,15 @@
 @import "./bootstrap/less/bootstrap";
-@import "css3-flexbox";
+@import "mixins.less";
 
 @controversialRed: #bb3221;
-@newOrange: #000;
+@newBlack: #000;
 @popularGreen: #5fb8b2;
 @unpopularGray: #7e7e7e;
 
 @margin: 12px;
 @padding: 12px;
+
+@import "detail.less";
 
 h1,h2,h3,h4,h5,h6 {
   font-family: "Bitter";
@@ -47,9 +49,9 @@ body.home {
     }
     .motion, .point { padding:10px; color: @white;
       &.new {
-        background: @newOrange;
+        background: @newBlack;
         &:hover {
-          background: lighten(@newOrange, 10%)
+          background: lighten(@newBlack, 10%)
         }
       }
       &.controversial {

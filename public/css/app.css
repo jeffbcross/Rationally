@@ -4198,205 +4198,80 @@ a.badge:hover {
 .invisible {
   visibility: hidden;
 }
-/** 
-CSS3 Flexbox Layout Module Helper Classes 
-https://github.com/politician/csswg-flexbox-less
-*/
-.compat-box-align-center {
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-box-align: middle;
-  box-align: center;
-}
-.css3-display-flexbox {
-  display: flexbox;
+.display-box {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-box;
-  display: box;
 }
-.css3-flex-pack-start {
-  flex-pack: start;
-  -webkit-box-pack: start;
-  -moz-box-pack: start;
-  -ms-box-pack: start;
-  box-pack: start;
+.detail #main .motion-header,
+.detail #main .point {
+  background: #000000;
+  color: #ffffff;
+  padding: 12px;
+  margin-bottom: 12px;
 }
-.css3-flex-pack-end {
-  flex-pack: end;
-  -webkit-box-pack: end;
-  -moz-box-pack: end;
-  -ms-box-pack: end;
-  box-pack: end;
+.detail #main .motion-header.controversial,
+.detail #main .point.controversial {
+  background: #bb3221;
 }
-.css3-flex-pack-center {
-  flex-pack: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-box-pack: center;
-  box-pack: center;
+.detail #main .motion-header.popular,
+.detail #main .point.popular {
+  background: #5fb8b2;
 }
-.css3-flex-pack-justify {
-  flex-pack: justify;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  -ms-box-pack: justify;
-  box-pack: justify;
+.detail #main .motion-header.unpopular,
+.detail #main .point.unpopular {
+  background: #7e7e7e;
 }
-.css3-flex-align-start {
-  flex-align: start;
-  -webkit-box-align: start;
-  -moz-box-align: start;
-  -ms-box-align: start;
-  box-align: start;
+.detail #main .points {
+  padding-left: 12px;
+  border-left: 1px solid #000000;
 }
-.css3-flex-align-end {
-  flex-align: end;
-  -webkit-box-align: end;
-  -moz-box-align: end;
-  -ms-box-align: end;
-  box-align: end;
+.detail #main .points .point {
+  width: 300px;
 }
-.css3-flex-align-baseline {
-  flex-align: baseline;
-  -webkit-box-align: baseline;
-  -moz-box-align: baseline;
-  -ms-box-align: baseline;
-  box-align: baseline;
+.detail #main .points .point .point-header {
+  border-bottom: 1px solid #ffffff;
+  font-weight: bold;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
 }
-.css3-flex-align-stretch {
-  flex-align: stretch;
-  -webkit-box-align: stretch;
-  -moz-box-align: stretch;
-  -ms-box-align: stretch;
-  box-align: stretch;
+.detail #main .points .point .point-header .stats {
+  float: right;
 }
-.css3-flex-align-center {
-  flex-align: center;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-box-align: middle;
-  box-align: center;
+.detail #main .points .point .point-header .stats .likes,
+.detail #main .points .point .point-header .stats .dislikes {
+  display: inline-block;
 }
-.css3-flex-flow-row {
-  flex-flow: row;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -ms-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -ms-box-direction: normal;
-  box-direction: normal;
-  -webkit-box-lines: single;
-  -moz-box-lines: single;
-  -ms-box-lines: single;
-  box-lines: single;
+.detail #main .points .point .comments-summary a {
+  color: #ffffff;
 }
-.css3-flex-flow-row-wrap {
-  flex-flow: row wrap;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -ms-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -ms-box-direction: normal;
-  box-direction: normal;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  -ms-box-lines: multiple;
-  box-lines: multiple;
+.detail #main .points .point-expanded {
+  width: 500px;
 }
-.css3-flex-flow-row-reverse {
-  flex-flow: row-reverse;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -ms-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -moz-box-direction: reverse;
-  -ms-box-direction: reverse;
-  box-direction: reverse;
-  -webkit-box-lines: single;
-  -moz-box-lines: single;
-  -ms-box-lines: single;
-  box-lines: single;
+.detail #main .points .point-expanded .comments {
+  margin-top: 12px;
+  padding: 12px;
+  background: #ffffff;
+  color: #000000;
+  border-left: 1px solid #ffffff;
 }
-.css3-flex-flow-row-reverse-wrap {
-  flex-flow: row-reverse wrap;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -ms-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -moz-box-direction: reverse;
-  -ms-box-direction: reverse;
-  box-direction: reverse;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  -ms-box-lines: multiple;
-  box-lines: multiple;
+.detail #main .points .point-expanded .comments .comment {
+  margin-bottom: 6px;
+  padding: 12px;
+  background: #ddd;
 }
-.css3-flex-flow-column {
-  flex-flow: column;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -ms-box-orient: vertical;
-  box-orient: vertical;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -ms-box-direction: normal;
-  box-direction: normal;
-  -webkit-box-lines: single;
-  -moz-box-lines: single;
-  -ms-box-lines: single;
-  box-lines: single;
+.detail #main .points .point-expanded .comments .comment.proponent {
+  background: #bbffbb;
 }
-.css3-flex-flow-column-wrap {
-  flex-flow: column wrap;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -ms-box-orient: vertical;
-  box-orient: vertical;
-  -webkit-box-direction: reverse;
-  -moz-box-direction: reverse;
-  -ms-box-direction: reverse;
-  box-direction: reverse;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  -ms-box-lines: multiple;
-  box-lines: multiple;
+.detail #main .points .point-expanded .comments .comment.opponent {
+  background: #ffcccc;
 }
-.css3-flex-flow-column-reverse {
-  flex-flow: column-reverse;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -ms-box-orient: vertical;
-  box-orient: vertical;
-  -webkit-box-direction: reverse;
-  -moz-box-direction: reverse;
-  -ms-box-direction: reverse;
-  box-direction: reverse;
-  -webkit-box-lines: single;
-  -moz-box-lines: single;
-  -ms-box-lines: single;
-  box-lines: single;
+.detail #main .points .point-expanded .comments .comment .author {
+  font-weight: bold;
+  margin-bottom: 6px;
 }
-.css3-flex-flow-column-reverse-wrap {
-  flex-flow: column-reverse wrap;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -ms-box-orient: vertical;
-  box-orient: vertical;
-  -webkit-box-direction: reverse;
-  -moz-box-direction: reverse;
-  -ms-box-direction: reverse;
-  box-direction: reverse;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  -ms-box-lines: multiple;
-  box-lines: multiple;
+.detail #main .points .point-expanded .comments .login-prompt {
+  text-align: center;
 }
 h1,
 h2,
