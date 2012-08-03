@@ -4198,6 +4198,206 @@ a.badge:hover {
 .invisible {
   visibility: hidden;
 }
+/** 
+CSS3 Flexbox Layout Module Helper Classes 
+https://github.com/politician/csswg-flexbox-less
+*/
+.compat-box-align-center {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: middle;
+  box-align: center;
+}
+.css3-display-flexbox {
+  display: flexbox;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+}
+.css3-flex-pack-start {
+  flex-pack: start;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -ms-box-pack: start;
+  box-pack: start;
+}
+.css3-flex-pack-end {
+  flex-pack: end;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -ms-box-pack: end;
+  box-pack: end;
+}
+.css3-flex-pack-center {
+  flex-pack: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+  box-pack: center;
+}
+.css3-flex-pack-justify {
+  flex-pack: justify;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-box-pack: justify;
+  box-pack: justify;
+}
+.css3-flex-align-start {
+  flex-align: start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -ms-box-align: start;
+  box-align: start;
+}
+.css3-flex-align-end {
+  flex-align: end;
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  -ms-box-align: end;
+  box-align: end;
+}
+.css3-flex-align-baseline {
+  flex-align: baseline;
+  -webkit-box-align: baseline;
+  -moz-box-align: baseline;
+  -ms-box-align: baseline;
+  box-align: baseline;
+}
+.css3-flex-align-stretch {
+  flex-align: stretch;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  -ms-box-align: stretch;
+  box-align: stretch;
+}
+.css3-flex-align-center {
+  flex-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: middle;
+  box-align: center;
+}
+.css3-flex-flow-row {
+  flex-flow: row;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
+  box-direction: normal;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -ms-box-lines: single;
+  box-lines: single;
+}
+.css3-flex-flow-row-wrap {
+  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
+  box-direction: normal;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -ms-box-lines: multiple;
+  box-lines: multiple;
+}
+.css3-flex-flow-row-reverse {
+  flex-flow: row-reverse;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -moz-box-direction: reverse;
+  -ms-box-direction: reverse;
+  box-direction: reverse;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -ms-box-lines: single;
+  box-lines: single;
+}
+.css3-flex-flow-row-reverse-wrap {
+  flex-flow: row-reverse wrap;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -moz-box-direction: reverse;
+  -ms-box-direction: reverse;
+  box-direction: reverse;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -ms-box-lines: multiple;
+  box-lines: multiple;
+}
+.css3-flex-flow-column {
+  flex-flow: column;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
+  box-direction: normal;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -ms-box-lines: single;
+  box-lines: single;
+}
+.css3-flex-flow-column-wrap {
+  flex-flow: column wrap;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -moz-box-direction: reverse;
+  -ms-box-direction: reverse;
+  box-direction: reverse;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -ms-box-lines: multiple;
+  box-lines: multiple;
+}
+.css3-flex-flow-column-reverse {
+  flex-flow: column-reverse;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -moz-box-direction: reverse;
+  -ms-box-direction: reverse;
+  box-direction: reverse;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -ms-box-lines: single;
+  box-lines: single;
+}
+.css3-flex-flow-column-reverse-wrap {
+  flex-flow: column-reverse wrap;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -moz-box-direction: reverse;
+  -ms-box-direction: reverse;
+  box-direction: reverse;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -ms-box-lines: multiple;
+  box-lines: multiple;
+}
 h1,
 h2,
 h3,
@@ -4216,6 +4416,13 @@ h6 {
 .navbar .navbar-inner h1.brand {
   font-size: 48px;
   color: #ffffff;
+}
+body.home .motion-row {
+  display: flexbox;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
 }
 body.home .motion-row  + .motion-row {
   margin-top: 12px;
