@@ -4224,6 +4224,17 @@ body.home .motion-row .point {
   background: #555555;
   color: #ffffff;
 }
+body.home .motion-row .motion .author {
+  font-style: oblique;
+  display: block;
+  margin-bottom: 12px;
+}
+body.home .motion-row .motion .likes {
+  text-align: right;
+}
+body.home .motion-row .motion .dislikes {
+  text-align: left;
+}
 body.home .motion-row .motion,
 body.home .motion-row .point {
   padding: 10px;
@@ -4231,17 +4242,17 @@ body.home .motion-row .point {
 }
 body.home .motion-row .motion.new,
 body.home .motion-row .point.new {
-  background: #cc6600;
+  background: #000000;
 }
 body.home .motion-row .motion.controversial,
 body.home .motion-row .point.controversial {
-  background: #aa1111;
+  background: #bb3221;
 }
 body.home .motion-row .motion.popular,
 body.home .motion-row .point.popular {
-  background: #66cc99;
+  background: #5fb8b2;
 }
 body.home .motion-row .motion.unpopular,
 body.home .motion-row .point.unpopular {
-  background: #999999;
+  background: #7e7e7e;
 }
