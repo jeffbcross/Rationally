@@ -13,6 +13,6 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('less', function() {
-    exec('lessc ./less/app.less', {silent: true}).output.to('./public/css/app.css');
+    exec('lessc less/app.less', {silent: true}).output.to('public/css/app.css');
   });
 };
