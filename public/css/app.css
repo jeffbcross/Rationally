@@ -4417,13 +4417,6 @@ h6 {
   font-size: 48px;
   color: #ffffff;
 }
-body.home .motion-row {
-  display: flexbox;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: box;
-}
 body.home .motion-row  + .motion-row {
   margin-top: 12px;
 }
