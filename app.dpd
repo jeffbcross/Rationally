@@ -1,0 +1,135 @@
+{
+	"1be9cc510b8568a1": {
+		"path": "/users",
+		"order": 1,
+		"properties": {
+			"FullName": {
+				"required": false,
+				"type": "string",
+				"typeLabel": "string",
+				"id": "FullName"
+			}
+		},
+		"onGet": "",
+		"onPost": "/* Authentication */\n// if (!me || !me.isAdmin) {\n//   cancel(\"You must be an admin!\", 401);\n// }\n\n/* Automatic properties */\n// this.creator = me.id;\n// this.creatorName = me.name;\n",
+		"onPut": "/* Readonly properties */\n// protect(\"creator\");\n",
+		"onDelete": "",
+		"onValidate": "/* Validation */\n// if (this.name.length < 10) {\n//   error(\"name\", \"Must be at least 10 characters\");\n// }\n",
+		"typeLabel": "Users Collection",
+		"type": "UserCollection",
+		"$renameFrom": "/users"
+	},
+	"e32116ed9a3a0933": {
+		"path": "/points",
+		"order": 2,
+		"properties": {
+			"isCounterPoint": {
+				"required": false,
+				"type": "boolean",
+				"typeLabel": "boolean",
+				"id": "isCounterPoint"
+			},
+			"author": {
+				"required": false,
+				"type": "number",
+				"typeLabel": "number",
+				"id": "author"
+			},
+			"argument": {
+				"required": false,
+				"type": "string",
+				"typeLabel": "string",
+				"id": "argument"
+			},
+			"summary": {
+				"required": false,
+				"type": "string",
+				"typeLabel": "string",
+				"id": "summary"
+			},
+			"isMotion": {
+				"required": false,
+				"type": "boolean",
+				"typeLabel": "boolean",
+				"id": "isMotion"
+			}
+		},
+		"onGet": "",
+		"onPost": "/* Authentication */\n// if (!me || !me.isAdmin) {\n//   cancel(\"You must be an admin!\", 401);\n// }\n\n/* Automatic properties */\n// this.creator = me.id;\n// this.creatorName = me.name;\n",
+		"onPut": "/* Readonly properties */\n// protect(\"creator\");\n",
+		"onDelete": "",
+		"onValidate": "/* Validation */\n// if (this.name.length < 10) {\n//   error(\"name\", \"Must be at least 10 characters\");\n// }\n",
+		"typeLabel": "Collection",
+		"type": "Collection",
+		"$renameFrom": "/points"
+	},
+	"e860d017cee1381d": {
+		"path": "/votes",
+		"order": 3,
+		"properties": {
+			"point": {
+				"required": true,
+				"type": "number",
+				"typeLabel": "number",
+				"id": "point"
+			},
+			"upvote": {
+				"required": true,
+				"type": "boolean",
+				"typeLabel": "boolean",
+				"id": "upvote"
+			},
+			"user": {
+				"required": true,
+				"type": "number",
+				"typeLabel": "number",
+				"id": "user"
+			}
+		},
+		"onGet": "",
+		"onPost": "/* Authentication */\n// if (!me || !me.isAdmin) {\n//   cancel(\"You must be an admin!\", 401);\n// }\n\n/* Automatic properties */\n// this.creator = me.id;\n// this.creatorName = me.name;\n",
+		"onPut": "/* Readonly properties */\n// protect(\"creator\");\n",
+		"onDelete": "",
+		"onValidate": "/* Validation */\n// if (this.name.length < 10) {\n//   error(\"name\", \"Must be at least 10 characters\");\n// }\n",
+		"typeLabel": "Collection",
+		"type": "Collection",
+		"$renameFrom": "/votes"
+	},
+	"df279a40ed1a4bbd": {
+		"properties": {
+			"text": {
+				"required": false,
+				"type": "string",
+				"typeLabel": "string",
+				"id": "text"
+			},
+			"user": {
+				"required": false,
+				"type": "number",
+				"typeLabel": "number",
+				"id": "user"
+			},
+			"replyToComment": {
+				"required": false,
+				"type": "number",
+				"typeLabel": "number",
+				"id": "replyToComment"
+			},
+			"point": {
+				"required": true,
+				"type": "number",
+				"typeLabel": "number",
+				"id": "point"
+			}
+		},
+		"onGet": "",
+		"onPost": "/* Authentication */\n// if (!me || !me.isAdmin) {\n//   cancel(\"You must be an admin!\", 401);\n// }\n\n/* Automatic properties */\n// this.creator = me.id;\n// this.creatorName = me.name;\n",
+		"onPut": "/* Readonly properties */\n// protect(\"creator\");\n",
+		"onDelete": "",
+		"onValidate": "/* Validation */\n// if (this.name.length < 10) {\n//   error(\"name\", \"Must be at least 10 characters\");\n// }\n",
+		"path": "/comments",
+		"order": 4,
+		"typeLabel": "Collection",
+		"type": "Collection"
+	}
+}
