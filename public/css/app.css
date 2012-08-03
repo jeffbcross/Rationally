@@ -4244,15 +4244,31 @@ body.home .motion-row .motion.new,
 body.home .motion-row .point.new {
   background: #000000;
 }
+body.home .motion-row .motion.new:hover,
+body.home .motion-row .point.new:hover {
+  background: #1a1a1a;
+}
 body.home .motion-row .motion.controversial,
 body.home .motion-row .point.controversial {
   background: #bb3221;
+}
+body.home .motion-row .motion.controversial:hover,
+body.home .motion-row .point.controversial:hover {
+  background: #db4634;
 }
 body.home .motion-row .motion.popular,
 body.home .motion-row .point.popular {
   background: #5fb8b2;
 }
+body.home .motion-row .motion.popular:hover,
+body.home .motion-row .point.popular:hover {
+  background: #82c8c3;
+}
 body.home .motion-row .motion.unpopular,
 body.home .motion-row .point.unpopular {
   background: #7e7e7e;
+}
+body.home .motion-row .motion.unpopular:hover,
+body.home .motion-row .point.unpopular:hover {
+  background: #989898;
 }

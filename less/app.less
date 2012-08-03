@@ -1,4 +1,4 @@
-@import "../bootstrap/less/bootstrap.less";
+@import "./bootstrap/less/bootstrap.less";
 @controversialRed: #bb3221;
 @newOrange: #000;
 @popularGreen: #5fb8b2;
@@ -46,15 +46,27 @@ body.home {
     .motion, .point { padding:10px; color: @white;
       &.new {
         background: @newOrange;
+        &:hover {
+          background: lighten(@newOrange, 10%)
+        }
       }
       &.controversial {
         background: @controversialRed;
+        &:hover {
+          background: lighten(@controversialRed, 10%)
+        }
       }
       &.popular {
         background: @popularGreen;
+        &:hover {
+          background: lighten(@popularGreen, 10%)
+        }
       }
       &.unpopular {
         background: @unpopularGray;
+        &:hover {
+          background: lighten(@unpopularGray, 10%)
+        }
       }
     }
   }
