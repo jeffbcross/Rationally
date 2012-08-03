@@ -4207,15 +4207,6 @@ h6 {
   font-family: "Bitter";
 }
 .navbar .navbar-inner {
-  background-color: #be0000;
-  background-image: -moz-linear-gradient(top, #cc0000, #aa0000);
-  background-image: -ms-linear-gradient(top, #cc0000, #aa0000);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cc0000), to(#aa0000));
-  background-image: -webkit-linear-gradient(top, #cc0000, #aa0000);
-  background-image: -o-linear-gradient(top, #cc0000, #aa0000);
-  background-image: linear-gradient(top, #cc0000, #aa0000);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc0000', endColorstr='#aa0000', GradientType=0);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -4225,4 +4216,32 @@ h6 {
 .navbar .navbar-inner h1.brand {
   font-size: 48px;
   color: #ffffff;
+}
+body.home .motion-row  + .motion-row {
+  margin-top: 12px;
+}
+body.home .motion-row .point {
+  background: #555555;
+  color: #ffffff;
+}
+body.home .motion-row .motion,
+body.home .motion-row .point {
+  padding: 10px;
+  color: #ffffff;
+}
+body.home .motion-row .motion.new,
+body.home .motion-row .point.new {
+  background: #cc6600;
+}
+body.home .motion-row .motion.controversial,
+body.home .motion-row .point.controversial {
+  background: #aa1111;
+}
+body.home .motion-row .motion.popular,
+body.home .motion-row .point.popular {
+  background: #66cc99;
+}
+body.home .motion-row .motion.unpopular,
+body.home .motion-row .point.unpopular {
+  background: #999999;
 }

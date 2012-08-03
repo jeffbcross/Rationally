@@ -1,4 +1,11 @@
 @import "../bootstrap/less/bootstrap.less";
+@controversialRed: #A11;
+@newOrange: #C60;
+@popularGreen: #6C9;
+@unpopularGray: #999;
+
+@margin: 12px;
+@padding: 12px;
 
 h1,h2,h3,h4,h5,h6 {
   font-family: "Bitter";
@@ -6,7 +13,6 @@ h1,h2,h3,h4,h5,h6 {
 
 .navbar {
   .navbar-inner {
-    #gradient.vertical(#C00, #A00);
     .border-radius(0);
     height: 50px;
     line-height:50px;
@@ -14,5 +20,30 @@ h1,h2,h3,h4,h5,h6 {
       font-size:48px;
       color: @white;
     }  
+  }
+}
+
+body.home {
+  .motion-row {
+    & + .motion-row { margin-top: @margin; }
+    .point {
+      background: @gray;
+      color:@white;
+      
+    }
+    .motion, .point { padding:10px; color: @white;
+      &.new {
+        background: @newOrange;
+      }
+      &.controversial {
+        background: @controversialRed;
+      }
+      &.popular {
+        background: @popularGreen;
+      }
+      &.unpopular {
+        background: @unpopularGray;
+      }
+    }
   }
 }
