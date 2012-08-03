@@ -30,9 +30,9 @@
 				"id": "isCounterPoint"
 			},
 			"author": {
-				"required": false,
-				"type": "number",
-				"typeLabel": "number",
+				"required": true,
+				"type": "string",
+				"typeLabel": "string",
 				"id": "author"
 			},
 			"argument": {
@@ -46,12 +46,6 @@
 				"type": "string",
 				"typeLabel": "string",
 				"id": "summary"
-			},
-			"isMotion": {
-				"required": false,
-				"type": "boolean",
-				"typeLabel": "boolean",
-				"id": "isMotion"
 			}
 		},
 		"onGet": "",
@@ -69,8 +63,8 @@
 		"properties": {
 			"point": {
 				"required": true,
-				"type": "number",
-				"typeLabel": "number",
+				"type": "string",
+				"typeLabel": "string",
 				"id": "point"
 			},
 			"upvote": {
@@ -81,8 +75,8 @@
 			},
 			"user": {
 				"required": true,
-				"type": "number",
-				"typeLabel": "number",
+				"type": "string",
+				"typeLabel": "string",
 				"id": "user"
 			}
 		},
@@ -96,29 +90,63 @@
 		"$renameFrom": "/votes"
 	},
 	"df279a40ed1a4bbd": {
+		"path": "/comments",
+		"order": 4,
 		"properties": {
-			"text": {
+			"time": {
 				"required": false,
+				"type": "date",
+				"typeLabel": "date",
+				"id": "time"
+			},
+			"text": {
+				"required": true,
 				"type": "string",
 				"typeLabel": "string",
 				"id": "text"
 			},
 			"user": {
-				"required": false,
-				"type": "number",
-				"typeLabel": "number",
+				"required": true,
+				"type": "string",
+				"typeLabel": "string",
 				"id": "user"
 			},
 			"replyToComment": {
 				"required": false,
-				"type": "number",
-				"typeLabel": "number",
+				"type": "string",
+				"typeLabel": "string",
 				"id": "replyToComment"
 			},
 			"point": {
 				"required": true,
-				"type": "number",
-				"typeLabel": "number",
+				"type": "string",
+				"typeLabel": "string",
+				"id": "point"
+			}
+		},
+		"onGet": "dpd.users.get({id: this.user}, function (user){\n    delete user.email;\n    this.user = user;\n})",
+		"onPost": "/* Authentication */\n// if (!me || !me.isAdmin) {\n//   cancel(\"You must be an admin!\", 401);\n// }\n\n/* Automatic properties */\n// this.creator = me.id;\n// this.creatorName = me.name;\n",
+		"onPut": "/* Readonly properties */\n// protect(\"creator\");\n",
+		"onDelete": "",
+		"onValidate": "/* Validation */\n// if (this.name.length < 10) {\n//   error(\"name\", \"Must be at least 10 characters\");\n// }\n",
+		"typeLabel": "Collection",
+		"type": "Collection",
+		"$renameFrom": "/comments"
+	},
+	"507d61109589c8d5": {
+		"path": "/flags",
+		"order": 5,
+		"properties": {
+			"reason": {
+				"required": false,
+				"type": "string",
+				"typeLabel": "string",
+				"id": "reason"
+			},
+			"point": {
+				"required": true,
+				"type": "string",
+				"typeLabel": "string",
 				"id": "point"
 			}
 		},
@@ -126,9 +154,39 @@
 		"onPost": "/* Authentication */\n// if (!me || !me.isAdmin) {\n//   cancel(\"You must be an admin!\", 401);\n// }\n\n/* Automatic properties */\n// this.creator = me.id;\n// this.creatorName = me.name;\n",
 		"onPut": "/* Readonly properties */\n// protect(\"creator\");\n",
 		"onDelete": "",
-		"onValidate": "/* Validation */\n// if (this.name.length < 10) {\n//   error(\"name\", \"Must be at least 10 characters\");\n// }\n",
-		"path": "/comments",
-		"order": 4,
+		"onValidate": "if ([\"EMOTIONAL\", \"IRRELEVANT\", \"INAPPROPRIATE\"].indexOf(this.reason) === -1) {\n    error(\"reason\", \"Not a valid reason to flag\")\n}",
+		"typeLabel": "Collection",
+		"type": "Collection",
+		"$renameFrom": "/flags"
+	},
+	"148583e18b2219dc": {
+		"properties": {
+			"points": {
+				"required": false,
+				"type": "array",
+				"typeLabel": "array",
+				"id": "points"
+			},
+			"owner": {
+				"required": true,
+				"type": "string",
+				"typeLabel": "string",
+				"id": "owner"
+			},
+			"summary": {
+				"required": true,
+				"type": "string",
+				"typeLabel": "string",
+				"id": "summary"
+			}
+		},
+		"onGet": "",
+		"onPost": "if (!me) {\n    cancel(\"You have to be logged in to create a motion.\", 401);\n}\n\nthis.owner = me.id;",
+		"onPut": "/* Readonly properties */\n// protect(\"creator\");\n",
+		"onDelete": "",
+		"onValidate": "\nif (this.summary.length > 140 || this.summary.length < 10) {\n    error(\"summary\", \"Summary must be between 10 and 140 characters. Yours is \"+this.summary.length);\n}",
+		"path": "/motions",
+		"order": 6,
 		"typeLabel": "Collection",
 		"type": "Collection"
 	}
